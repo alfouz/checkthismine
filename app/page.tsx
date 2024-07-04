@@ -1,4 +1,6 @@
-import styles from "./page.module.scss";
+import Link from "next/link";
+import styles from "./page.module.css";
+import ROUTES from "./utils/routes";
 
 export default function Home() {
   return (
@@ -12,7 +14,9 @@ export default function Home() {
           minLength={4}
           maxLength={20}
         />
-        <button className={styles.playButton}>Play</button>
+        <Link href={ROUTES.GAME}>
+          <button className={styles.playButton}>Play</button>
+        </Link>
       </div>
     </main>
   );
